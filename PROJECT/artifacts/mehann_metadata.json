@@ -1,0 +1,77 @@
+{
+	"compiler": {
+		"version": "0.8.17+commit.8df45f5f"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [],
+				"name": "mee",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "meeeeee",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"remix_ide/PROJECT/mm.sol": "mehann"
+		},
+		"evmVersion": "london",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"remix_ide/PROJECT/mm.sol": {
+			"keccak256": "0xe1fa890430c7eadc3356b39c70aea9f2182f8800890908180bc67433e12cad42",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://bf3ef56ad6a555f14709243da4f008e0fd91f45fda94bc47ec6c2e38325e0f2f",
+				"dweb:/ipfs/QmNufTc8TKvV3hLJmTLs463HBWKjAuZS9erL8M45xdcdHw"
+			]
+		}
+	},
+	"version": 1
+}

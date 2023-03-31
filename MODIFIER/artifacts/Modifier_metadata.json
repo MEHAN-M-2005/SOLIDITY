@@ -1,0 +1,64 @@
+{
+	"compiler": {
+		"version": "0.8.17+commit.8df45f5f"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "newowner",
+						"type": "address"
+					}
+				],
+				"name": "new_owner",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"remix_ide/MODIFIER/modifier_1.sol": "Modifier"
+		},
+		"evmVersion": "london",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"remix_ide/MODIFIER/modifier_1.sol": {
+			"keccak256": "0x9887d48448ea4819a94bf5eb8996c1c6de8acae9d52abf098061a7a9ec4dc83e",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://e322ea463949fd3a995bd3b7154f62f1360dc118a0c4b048ff80b9147158859a",
+				"dweb:/ipfs/QmSoFu2rFNnQb1y7AM2vCn2GgcUvaAwS52P7T5xtoG7Y1a"
+			]
+		}
+	},
+	"version": 1
+}

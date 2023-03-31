@@ -1,0 +1,63 @@
+{
+	"compiler": {
+		"version": "0.8.7+commit.e28d00a7"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"stateMutability": "payable",
+				"type": "fallback"
+			},
+			{
+				"inputs": [],
+				"name": "mee",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"remix ide/fallback.sol": "FALL_Back"
+		},
+		"evmVersion": "london",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"remix ide/fallback.sol": {
+			"keccak256": "0x97537f5f915958eea374de51739c4f0bee0cbce7449a67d01b55efef83a645b6",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://f5fade5a8e1f7b714ce6398ed63ad53d5037e04da52b2d68e2c917a6ceb7338d",
+				"dweb:/ipfs/QmVG24i2E63t34hTWQJCkrwPJHbpA5U2rUmYPg5ppr34Gd"
+			]
+		}
+	},
+	"version": 1
+}

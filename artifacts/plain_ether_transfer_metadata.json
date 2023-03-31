@@ -1,0 +1,104 @@
+{
+	"compiler": {
+		"version": "0.8.17+commit.8df45f5f"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "sender",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "value",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "msgg",
+						"type": "string"
+					}
+				],
+				"name": "fall",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "sender",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "value",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "msgg",
+						"type": "string"
+					}
+				],
+				"name": "rev",
+				"type": "event"
+			},
+			{
+				"stateMutability": "payable",
+				"type": "fallback"
+			},
+			{
+				"stateMutability": "payable",
+				"type": "receive"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"remix ide/RECEIVE AND FALL_BACK FUNC.sol": "plain_ether_transfer"
+		},
+		"evmVersion": "london",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"remix ide/RECEIVE AND FALL_BACK FUNC.sol": {
+			"keccak256": "0xfec91b7d7e9f381a6a05f2a92baea5d062176ad46b18886a103a50729ddd612d",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://094b3e181d99e5ce20bd70d686311e49df562e275e8a0022af0839138f825c25",
+				"dweb:/ipfs/Qmdcwf6Y6ju7ECB34zKkSUY5YsD1EWWtsmDM35o2mqxy8X"
+			]
+		}
+	},
+	"version": 1
+}

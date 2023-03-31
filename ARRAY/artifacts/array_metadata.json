@@ -1,0 +1,59 @@
+{
+	"compiler": {
+		"version": "0.8.7+commit.e28d00a7"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "index",
+						"type": "uint256"
+					}
+				],
+				"name": "remove",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"remix_ide/ARRAY/remove array element by switching.sol": "array"
+		},
+		"evmVersion": "london",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"remix_ide/ARRAY/remove array element by switching.sol": {
+			"keccak256": "0x08cbf7ba344b19e8cf3300aafbb45aeb84bd885a1dcbb5327b119c73e35c1b4c",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://61ebba93fba8573b98ad37edaf4adbdfe3df5abb0f6158a16b33b44918cf0fe4",
+				"dweb:/ipfs/QmWR289pdPPzEzTTjFKQDvZUyeN7Yzu6GztuTwhY1EEs1Y"
+			]
+		}
+	},
+	"version": 1
+}

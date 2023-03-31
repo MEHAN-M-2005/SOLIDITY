@@ -1,0 +1,66 @@
+{
+	"compiler": {
+		"version": "0.8.17+commit.8df45f5f"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "a",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "forr",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"remix_ide/fall-back/forloop.sol": "Mehan"
+		},
+		"evmVersion": "london",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"remix_ide/fall-back/forloop.sol": {
+			"keccak256": "0xc97960e0b8a4fe5acaa112f6c0fd223442f27d02de754ac475979a6a09bf9bcc",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://91759e91e86225bd1035aa36557f56303a7158aabb6badf1901c124fc5626b1b",
+				"dweb:/ipfs/QmeBhJmobH9akNWdWWkyvcNno4dNJR8RrxkHFCzVecRvzT"
+			]
+		}
+	},
+	"version": 1
+}

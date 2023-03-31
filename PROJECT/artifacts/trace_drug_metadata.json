@@ -1,0 +1,227 @@
+{
+	"compiler": {
+		"version": "0.8.7+commit.e28d00a7"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "indexx",
+						"type": "uint256"
+					}
+				],
+				"name": "access",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "drugs",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "serial_no",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "drug_name",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "drug_quantity",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "drug_value",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "no",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "name",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "weight",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					}
+				],
+				"name": "insert_data",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "show",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "index1",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "name1",
+						"type": "string"
+					}
+				],
+				"name": "up_name",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "index2",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "weight1",
+						"type": "uint256"
+					}
+				],
+				"name": "up_quantity",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "index3",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "amount1",
+						"type": "uint256"
+					}
+				],
+				"name": "up_value",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "index0",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "no1",
+						"type": "uint256"
+					}
+				],
+				"name": "update_data",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"remix_ide/PROJECT/drug.sol": "trace_drug"
+		},
+		"evmVersion": "london",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"remix_ide/PROJECT/drug.sol": {
+			"keccak256": "0x7bc7a5192f99b633822a10739fb5940f63b4aa249f935f259018991d59774c08",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://374dad770f387649962c45ad0c6a798f6084605d8394ab28e79b2be8376490cc",
+				"dweb:/ipfs/QmPVrrcB2YngagPKygJwehTDMdL1PoxaGu97d5mWUVXy9P"
+			]
+		}
+	},
+	"version": 1
+}

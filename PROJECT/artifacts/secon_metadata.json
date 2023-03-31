@@ -1,0 +1,45 @@
+{
+	"compiler": {
+		"version": "0.8.17+commit.8df45f5f"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"remix ide/PROJECT/TIME_LOCK.sol": "secon"
+		},
+		"evmVersion": "london",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"remix ide/PROJECT/TIME_LOCK.sol": {
+			"keccak256": "0xf22d76e91b69b934d13cfc0e3b02aecf64f153ceb8a34421cdb5bab5a9dafb9e",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://412fe83f681a1b274a4f202f582a3e9ee09b1a14e291ae23bb53d25efcb09e64",
+				"dweb:/ipfs/Qme5cjhTd6HBL3ps7PLgLrPP5gdZUJBUqzELs1AzS2sSNJ"
+			]
+		}
+	},
+	"version": 1
+}

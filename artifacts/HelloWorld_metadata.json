@@ -1,0 +1,59 @@
+{
+	"compiler": {
+		"version": "0.8.17+commit.8df45f5f"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "mee",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"remix_ide/mehan.sol": "HelloWorld"
+		},
+		"evmVersion": "london",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"remix_ide/mehan.sol": {
+			"keccak256": "0xfe82f696656fd845d9c54cbf7026e58f7b704318635335533cb9d98ed6de640f",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://9bdcaa4667a3a4bed4a881b81c1f40bd15c2e2837eab1872112642c5db666d00",
+				"dweb:/ipfs/QmV5XMtEKZeUzeuza5LXySvjRjnmp5grxhFBpDdn2x7pAM"
+			]
+		}
+	},
+	"version": 1
+}

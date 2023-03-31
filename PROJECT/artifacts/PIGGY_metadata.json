@@ -1,0 +1,59 @@
+{
+	"compiler": {
+		"version": "0.8.7+commit.e28d00a7"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "owner",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"remix ide/PROJECT/MARK-11.sol": "PIGGY"
+		},
+		"evmVersion": "london",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"remix ide/PROJECT/MARK-11.sol": {
+			"keccak256": "0xdabff97f966a621d5b565e877f30afade7b7666756de7fda469473315f74a432",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://0e244e87ca5aec9a1a02191b524ae64dd0d1829d6f9ba4cbee1263c18ebf2a51",
+				"dweb:/ipfs/QmYKNdaUyxf7UM2gzn25iZkiZVQBGkRxYyt4G5rb789ttD"
+			]
+		}
+	},
+	"version": 1
+}

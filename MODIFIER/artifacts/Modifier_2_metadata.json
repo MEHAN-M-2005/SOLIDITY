@@ -1,0 +1,45 @@
+{
+	"compiler": {
+		"version": "0.8.17+commit.8df45f5f"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"remix ide/MODIFIER/modifier_2.sol": "Modifier_2"
+		},
+		"evmVersion": "london",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"remix ide/MODIFIER/modifier_2.sol": {
+			"keccak256": "0x36722ddb2dceac2902adacd2f6d546c58c35ae81b58404b42c91f375d822d8a9",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://82565f41dffa799615c098e5f18648475d7fc84a757a3da589b8b135ad7622a1",
+				"dweb:/ipfs/QmeXDrWQQjqciCemm6akhQcvPzPB3pNUzNgPJNpCvHosxA"
+			]
+		}
+	},
+	"version": 1
+}
