@@ -21,6 +21,7 @@ contract Mapping {
         delete myMap[_addr];
     }
 }
+
 contract NestedMapping {
     // Nested mapping (mapping from address to another mapping)
     mapping(address => mapping(uint => bool)) public nested;
@@ -37,5 +38,18 @@ contract NestedMapping {
 
     function remove(address _addr1, uint _i) public {
         delete nested[_addr1][_i];
+    }
+}
+//ANOTHER EXAMPLE FORF NESTED MAPPING
+contract nestedmapping
+{
+    mapping(address => mapping(uint => string)) bio_data;
+    function setter(uint rollno ,string memory name) public
+    {
+        bio_data[msg.sender][rollno] = name;
+    }
+    function getter(uint no) public view returns(string memory)
+    {
+        return bio_data[msg.sender][no];
     }
 }
