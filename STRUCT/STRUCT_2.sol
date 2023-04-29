@@ -13,6 +13,11 @@ contract NestedMapping {
     } 
     function mee(string memory _namee,uint _agee) public 
     {
-        bio.push(bio_data(_namee,_agee));
+        bio1.push(bio_data(_namee,_agee));
+      
+    }
+    function foo() public  view returns(bio_data[] memory)
+    {
+        return bio1;
     }
 }
