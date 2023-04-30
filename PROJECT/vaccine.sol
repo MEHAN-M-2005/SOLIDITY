@@ -10,7 +10,7 @@ contract vaccines
     uint immutable finall ;
     address owner;
     address customer;
-    uint received=address();
+    uint received;
     address login;
     
     constructor(address addresss) 
@@ -34,11 +34,11 @@ contract vaccines
         _;
     }
     //TO RECEIVE ETH
-    receive() external payable{}
-    function MakePayment(address ownerAddress,uint amountt) public  returns(uint)
-    {      
-          
+    receive() external payable
+    {
+        require(tx.origin==login,"Send eth from yout address");
     }
+     
     //TO DET DATA
     struct Vaccine
     {
@@ -126,23 +126,35 @@ contract vaccines
     {
         return status;
     }
-
-
-
 }
 
-contract customerContract{
-    address owner_contract;
-    receive() external payable{}
-    constructor() payable {
-        owner_contract=msg.sender;
+/*______________________________________________________________________________________________________________*/
+contract customerr {
+    //USING STRUCT STORING MULTIPLE VALUES IN DIFFERENT DATA TYPES IN AN SINGLE INDEX OF AN ARRAY
+    address login;
+    receive() external payable {}
+    constructor(address ownerr)
+    {
+        login=ownerr;
     }
-    function sendd(address payable _add, uint amount) external payable{
-        require(msg.sender==owner_contract,"not owner");
-        (bool result,) = _add.call{value:amount,gas:2500}("");
-        require(result,"reverted");
+    address owner;
+    modifier validAddress(address _addr) {
+        require(_addr==login, "Not valid address");
+        _;
     }
-    function bal() external view returns(uint){
-        return(address(this).balance);
+
+    function changeOwner(address _newOwner,address winner,uint amount) public  validAddress(_newOwner) {
+        owner = _newOwner;
+        payable(winner).transfer(amount);
     }
-}
+    function returnOwner() public view returns(address)
+    {
+        return msg.sender;
+    }
+
+    function balance()public view  returns(uint)
+    {
+        return address(this).balance;
+    }
+    }
+
