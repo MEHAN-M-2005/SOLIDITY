@@ -68,7 +68,7 @@ contract vaccines
         string memory  _expiry_date,
         uint _quantity,
         uint _dosage_ml
-         ) public 
+         ) public amount
          {
             data.push(Vaccine({name:_name,disease:_disease,temperature:_temperature,expiry_date:_expiry_date
             ,quantity:_quantity,dosage_ml:_dosage_ml}));  
@@ -145,7 +145,7 @@ contract customerr {
         _;
     }
 
-    function changeOwner(address _newOwner,address winner,uint amount) public  validAddress(_newOwner) {
+    function changeOwner(address _newOwner,address winner,uint amount) public  payable validAddress(_newOwner) {
         owner = _newOwner;
         require(amount==3 ether,"not sufficient funds");
         payable(winner).transfer(amount);
