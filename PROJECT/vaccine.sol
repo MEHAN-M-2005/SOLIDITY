@@ -12,6 +12,7 @@ contract vaccines
     address customer;
     uint received;
     address login;
+    event tranc(address indexed addr,uint indexed value);
     
     constructor(address addresss) 
     {   
@@ -37,6 +38,7 @@ contract vaccines
     receive() external payable
     {
         require(tx.origin==login,"Send eth from yout address");
+       emit tranc(tx.origin,msg.value);
     }
      
     //TO DET DATA
@@ -145,6 +147,7 @@ contract customerr {
 
     function changeOwner(address _newOwner,address winner,uint amount) public  validAddress(_newOwner) {
         owner = _newOwner;
+        require(amount==3 ether,"not sufficient funds");
         payable(winner).transfer(amount);
     }
     function returnOwner() public view returns(address)
