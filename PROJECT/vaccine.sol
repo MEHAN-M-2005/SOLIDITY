@@ -29,7 +29,7 @@ contract vaccines
     }
     modifier amount()
     {   //require(login==customer,"MAKE TRANSACTION WITH YOUR ADRESS");
-        require(received >=3 ether ,"pay required amount");
+        require(  ether ,"pay required amount");
 
         owner=msg.sender;
         _;
@@ -37,7 +37,7 @@ contract vaccines
     //TO RECEIVE ETH
     receive() external payable
     {
-        require(tx.origin==login,"Send eth from yout address");
+      //  require(tx.origin==login,"Send eth from yout address");
        emit tranc(tx.origin,msg.value);
     }
      
@@ -145,7 +145,7 @@ contract customerr {
         _;
     }
 
-    function changeOwner(address _newOwner,address winner,uint amount) public  payable validAddress(_newOwner) {
+    function changeOwner(address _newOwner,address winner,uint amount) public  validAddress(_newOwner) {
         owner = _newOwner;
         require(amount==3 ether,"not sufficient funds");
         payable(winner).transfer(amount);
