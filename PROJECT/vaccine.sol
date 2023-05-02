@@ -1,7 +1,9 @@
 //SPDX-License-Identifier:MIT
 pragma solidity 0.8.19;
 contract vaccines
-{   bytes32 ordered= keccak256(bytes("ordered"));
+{    customerr callingContract = new customerr();
+    uint fees = callingContract. returnAmount();
+    bytes32 ordered= keccak256(bytes("ordered"));
     bytes32 Shipped = keccak256(bytes("shipped"));
     bytes32 Out_for_Delivery = keccak256(bytes("Out for delivery"));
     bytes32 Delivered = keccak256(bytes("delivered"));
@@ -29,7 +31,7 @@ contract vaccines
     }
     modifier amount()
     {   //require(login==customer,"MAKE TRANSACTION WITH YOUR ADRESS");
-        require(  ether ,"pay required amount");
+        require( fees == 3 ether ,"pay required amount");
 
         owner=msg.sender;
         _;
@@ -132,8 +134,8 @@ contract vaccines
 
 /*______________________________________________________________________________________________________________*/
 contract customerr {
-    //USING STRUCT STORING MULTIPLE VALUES IN DIFFERENT DATA TYPES IN AN SINGLE INDEX OF AN ARRAY
     address login;
+    uint fee;
     receive() external payable {}
     constructor(address ownerr)
     {
@@ -147,12 +149,13 @@ contract customerr {
 
     function changeOwner(address _newOwner,address winner,uint amount) public  validAddress(_newOwner) {
         owner = _newOwner;
+        fee=amount;
         require(amount==3 ether,"not sufficient funds");
         payable(winner).transfer(amount);
     }
-    function returnOwner() public view returns(address)
+    function returnAmount() public view returns(uint)
     {
-        return msg.sender;
+        return fee;
     }
 
     function balance()public view  returns(uint)
