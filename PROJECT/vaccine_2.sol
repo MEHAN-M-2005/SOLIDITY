@@ -1,8 +1,9 @@
 //SPDX-License-Identifier:MIT
 pragma solidity 0.8.19;
 contract vaccines
-{   customerr fees = new customerr();
-   // uint price = fees.fee();
+{   
+   
+  // uint public price = fees.fee();
     bytes32 ordered= keccak256(bytes("ordered"));
     bytes32 Shipped = keccak256(bytes("shipped"));
     bytes32 Out_for_Delivery = keccak256(bytes("Out for delivery"));
@@ -16,13 +17,13 @@ contract vaccines
     address login;
     event tranc(address indexed addr,uint indexed value);
     
-    constructor(address addresss) 
+    constructor() 
     {   
         current = block.timestamp;
         want= 1 minutes;
         finall = want+current;
         owner=msg.sender;
-        login=addresss;
+        
     }
     modifier time()
     {
@@ -31,9 +32,9 @@ contract vaccines
     }
     modifier amount()
     {   //require(login==customer,"MAKE TRANSACTION WITH YOUR ADRESS");
-        require( fees.fee() == 3 ether ,"pay required amount");
+        require( address(this).balance == 3 ether ,"pay required amount");
 
-        owner=msg.sender;
+       // owner=msg.sender;
         _;
     }
     //TO RECEIVE ETH
@@ -53,7 +54,7 @@ contract vaccines
         uint quantity;
         uint dosage_ml;
     }
-    Vaccine[] public data;
+    Vaccine[] public Vaccinedata;
     enum Status
     {
         Ordered,
@@ -72,7 +73,7 @@ contract vaccines
         uint _dosage_ml
          ) public amount
          {
-            data.push(Vaccine({name:_name,disease:_disease,temperature:_temperature,expiry_date:_expiry_date
+             Vaccinedata.push(Vaccine({name:_name,disease:_disease,temperature:_temperature,expiry_date:_expiry_date
             ,quantity:_quantity,dosage_ml:_dosage_ml}));  
             numberOfVaccines+=1;
          }
@@ -85,29 +86,29 @@ contract vaccines
     //TO UPDATE DATA
     function updateName(uint index,string memory Name) public
     {
-        data[index-1].name=Name;
+         Vaccinedata[index-1].name=Name;
     }
      function updatedisease(uint index,string memory Disease) public
     {
-        data[index-1].disease=Disease;
+         Vaccinedata[index-1].disease=Disease;
     }
      function updateTemperature(uint index,uint Temperature) public
     {
-        data[index-1].temperature=Temperature;
+         Vaccinedata[index-1].temperature=Temperature;
     }
      function updateExpirtDate(uint index,string memory Expiry_date) public
     {
-        data[index-1].expiry_date=Expiry_date;
+         Vaccinedata[index-1].expiry_date=Expiry_date;
     }
      function updateQuantity(uint index,uint Quantity) public
     {
-        data[index-1].quantity=Quantity;
+         Vaccinedata[index-1].quantity=Quantity;
     }
      function updateDosageMl(uint index,uint Dosage_ml) public
     {
-        data[index-1].dosage_ml=Dosage_ml;
+         Vaccinedata[index-1].dosage_ml=Dosage_ml;
     }
-     function statuss(string memory  state) public
+     function statuss(string memory  state) public time
     {   //require(state!=);
         if(keccak256(bytes(state))==ordered)
         {
@@ -135,18 +136,17 @@ contract vaccines
 /*______________________________________________________________________________________________________________*/
 contract customerr {
     address login;
-    uint public fee;
+    uint  fee;
     receive() external payable {}
     constructor()
     {
         login=msg.sender;
     }
-    address owner;
+    address  owner;
     modifier validAddress(address _addr) {
         require(_addr==login, "Not valid address");
         _;
     }
-
     function changeOwner(address _newOwner,address winner,uint amount) public  validAddress(_newOwner) {
         owner = _newOwner;
         fee=amount;
