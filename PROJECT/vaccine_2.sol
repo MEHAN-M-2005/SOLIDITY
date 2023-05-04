@@ -17,22 +17,25 @@ contract vaccines
     address login;
     event tranc(address indexed addr,uint indexed value);
     
-    constructor() 
+    constructor(address customerAddress) 
     {   
         current = block.timestamp;
         want= 1 minutes;
         finall = want+current;
         owner=msg.sender;
+        login=customerAddress;
         
     }
     modifier time()
     {
         require(block.timestamp>finall,"wait");
+        require(tx.origin==login,"Send eth from yout address");
         _;
     }
     modifier amount()
     {   //require(login==customer,"MAKE TRANSACTION WITH YOUR ADRESS");
         require( address(this).balance == 3 ether ,"pay required amount");
+        require(tx.origin==login,"Send eth from yout address");
 
        // owner=msg.sender;
         _;
@@ -40,7 +43,7 @@ contract vaccines
     //TO RECEIVE ETH
     receive() external payable
     {
-      //  require(tx.origin==login,"Send eth from yout address");
+       
        emit tranc(tx.origin,msg.value);
     }
      
