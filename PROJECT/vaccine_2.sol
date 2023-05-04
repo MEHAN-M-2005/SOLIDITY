@@ -13,7 +13,6 @@ contract vaccines
     uint immutable finall ;
     address owner;
     address customer;
-    uint received;
     address login;
     event tranc(address indexed addr,uint indexed value);
     
