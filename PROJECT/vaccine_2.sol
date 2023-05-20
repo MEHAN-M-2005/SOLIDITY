@@ -80,11 +80,11 @@ contract vaccines
             numberOfVaccines+=1;
          }
     // TO GET DATA
-    /*function getdata(uint index) public view returns(Vaccine memory)
+    function getdata(uint index) public view returns(Vaccine memory)
     {
-        return data[index];
+        return Vaccinedata[index-1];
     }
-    */
+    
     //TO UPDATE DATA
     function updateName(uint index,string memory Name) public
     {
@@ -154,10 +154,6 @@ contract customerr {
         fee=amount;
         require(amount==3 ether,"not sufficient funds");
         payable(winner).transfer(amount);
-    }
-    function returnAmount() public view returns(uint)
-    {
-        return fee;
     }
 
     function balance()public view  returns(uint)
