@@ -10,7 +10,7 @@ contract Seller
     {
         owner = msg.sender;
     }
-    mapping(address => vaccine[]) mapped;
+    mapping(address => mapping(uint => vaccine[])) mapped;
     struct vaccine
     {
         string name;
@@ -24,19 +24,20 @@ contract Seller
     vaccine[] public vac;
     function AddDetails(string memory _name,uint _dosage ,
      string memory _disease, string memory _expiry , uint _temperature,
-     string memory _company
+     string memory _company,uint index
     ) public 
     {
         vac.push(vaccine(_name,_dosage,_disease,_expiry,_temperature,_company,msg.sender));
+        mapped[msg.sender][index].push(vaccine(_name,_dosage,_disease,_expiry,_temperature,_company,msg.sender));
         addrs = msg.sender;
     }
     
-    function GetterFunc(address recepient) public view returns(vaccine[] memory)
+    function GetterFunc(address recepient,uint index) public view returns(vaccine[] memory)
     {       if(addrs != addrs)
             {
                 revert("Address Not Found");
             }
-            return mapped[recepient];
+            return mapped[recepient][index];
     }
 
 
@@ -61,6 +62,10 @@ contract Seller
     }
     function EditCompany(uint index,string memory _company) public {
         vac[index-1].company = _company;
+    }
+    function DelStruct( address addr,uint index) public 
+    {
+        delete mapped[addr][index];
     }
 
     
