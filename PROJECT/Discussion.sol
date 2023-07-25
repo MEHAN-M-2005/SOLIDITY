@@ -11,6 +11,7 @@ contract Discussion
     
     address owner;
     address[] members;
+    address creator;
     constructor()
     {
         owner = msg.sender;
@@ -32,19 +33,21 @@ contract Discussion
         _;
     }
     mapping (address=>string) mapped;
-    mapping (address =>mapping(string=>string)) comment2;
+    mapping (address =>mapping(address=>string)) comment2;
     function addMembers(address addr) public  condition
     {
         members.push(addr);
     }
-    function CreatePost(string memory data) public  condition2
+    function CreatePost(string memory data) public  condition2 
     {
        
         mapped[msg.sender] =  data;
+        creator = msg.sender;
+
     }
     function Comment(string memory data_1) public condition2
     {
-        mapped[msg.sender][data_1] = 
+      comment2[creator][msg.sender] = data_1;
     }
 
 
@@ -54,4 +57,3 @@ contract Discussion
 
     
 }
-
