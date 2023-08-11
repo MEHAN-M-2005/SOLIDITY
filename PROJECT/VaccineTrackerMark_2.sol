@@ -1,14 +1,16 @@
 //SPDX-License-Identifier:MIT
 pragma solidity 0.8.19;
-//add vaccine details
-//query it when required
 contract Seller
 {   
     address owner;
-    address addrs;
     constructor()
     {
         owner = msg.sender;
+    }
+    modifier condition(address addr) 
+    {
+        require(addr==msg.sender,"not owner");
+        _;
     }
     mapping(address => mapping(uint => vaccine[])) mapped;
     struct vaccine
@@ -29,15 +31,15 @@ contract Seller
     {
         vac.push(vaccine(_name,_dosage,_disease,_expiry,_temperature,_company,msg.sender));
         mapped[msg.sender][index].push(vaccine(_name,_dosage,_disease,_expiry,_temperature,_company,msg.sender));
-        addrs = msg.sender;
+        
     }
     
-    function GetterFunc(address recepient,uint index) public view returns(vaccine[] memory)
+    function GetterFunc(address recepient,uint index) public view condition(recepient) returns(vaccine[] memory)
     {          require(recepient==owner,"not owner");
             return mapped[recepient][index];
     }
 
-    function DelStruct( address addr,uint index) public 
+    function DelStruct( address addr,uint index) public condition(addr)
     {
         delete mapped[addr][index];
         delete vac[index];
