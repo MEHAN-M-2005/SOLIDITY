@@ -8,52 +8,75 @@
 pragma solidity 0.8.19;
 contract Discussion
 {
-    
     address owner;
-    address[] members;
-    address creator;
+    //uint PostCount;
+    //address[ ] public membersc;
+    mapping(address=>bool) public mapped;
+ //   mapping(address=>string) public mapped2;
     constructor()
     {
-        owner = msg.sender;
+        owner=msg.sender;
+        mapped[msg.sender]=true;
     }
-    modifier condition()
+    error unauthorised(address addrs);
+    modifier condition() 
     {
-        require(owner==msg.sender,"not owner");
-        _;
-    }
-    modifier condition2()
-    {
-         for(uint iteration=0;iteration<=members.length;iteration++)
+        if(!mapped[msg.sender])
         {
-            if(msg.sender != members[iteration])
-            {
-                revert("not a member");
-            }
+            revert unauthorised({addrs:msg.sender});
         }
         _;
     }
-    mapping (address=>string) mapped;
-    mapping (address =>mapping(address=>string)) comment2;
-    function addMembers(address addr) public  condition
+    struct Posted
     {
-        members.push(addr);
+        uint post_no;
+        address author;
+        string message;
+        uint posttime;
     }
-    function CreatePost(string memory data) public  condition2 
+    mapping(address=>Posted) public mapped2;
+    struct Commented
     {
-       
-        mapped[msg.sender] =  data;
-        creator = msg.sender;
-
+        uint comment_no;
+        address author;
+        string commentMessage;
+        uint commenttime;
     }
-    function Comment(string memory data_1) public condition2
+    mapping(address=>mapping(address=>Commented)) public mapped3;
+    Posted public post;
+    Commented public comment;
+    function addMembers(address addr) public condition 
     {
-      comment2[creator][msg.sender] = data_1;
+        mapped[addr]=true;
     }
+    function remove(address addr) public 
+    {
+        require(owner==msg.sender,"not owner");
+        mapped[addr]=false;
+    }
+    function createPost(address addr,string memory str) public  condition returns(address)
+    {
+     //   mapped2[addr]=str;
+      //  PostCount++;
+       // membersc.push(addr);
+       Posted storage posvalue = mapped2[addr];
+       posvalue.post_no = posvalue.post_no +1 ;
+       posvalue.author= addr;
+       posvalue.message = str;
+       posvalue.posttime = block.timestamp;
+       return addr;
 
+    }
+    function createComment(address addr, string memory str) public condition
+    {
+        address tempaddr  = createPost(addr,str); 
+        Commented storage comvalue = mapped3[tempaddr][addr];
+        comvalue.comment_no = comvalue.comment_no +1 ;
+        comvalue.author = addr;
+        comvalue.commentMessage = str;
+        comvalue.commenttime=block.timestamp;
+    }
+    function deleteval()
 
-
-
-
-
-    
+   
 }
