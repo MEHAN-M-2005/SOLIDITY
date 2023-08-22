@@ -11,7 +11,7 @@ contract Discussion
     address owner;
     //uint PostCount;
     //address[ ] public membersc;
-    mapping(address=>bool) public mapped;
+    mapping(address=>bool) internal mapped;
  //   mapping(address=>string) public mapped2;
     constructor()
     {
@@ -34,7 +34,7 @@ contract Discussion
         string message;
         uint posttime;
     }
-    mapping(address=>Posted) public mapped2;
+    mapping(address=>Posted) internal mapped2;
     struct Commented
     {
         uint comment_no;
@@ -42,9 +42,9 @@ contract Discussion
         string commentMessage;
         uint commenttime;
     }
-    mapping(address=>mapping(address=>Commented)) public mapped3;
-    Posted public post;
-    Commented public comment;
+    mapping(address=>mapping(address=>Commented)) internal mapped3;
+    Posted internal post;
+    Commented internal comment;
     function addMembers(address addr) public condition 
     {
         mapped[addr]=true;
@@ -67,7 +67,7 @@ contract Discussion
        return addr;
 
     }
-    function createComment(address addr, string memory str) public condition
+    function createComment(address addr, string memory str) public condition returns(address)
     {
         address tempaddr  = createPost(addr,str); 
         Commented storage comvalue = mapped3[tempaddr][addr];
@@ -75,8 +75,17 @@ contract Discussion
         comvalue.author = addr;
         comvalue.commentMessage = str;
         comvalue.commenttime=block.timestamp;
+        return tempaddr;
     }
-    function deleteval()
+    function getPost(address addr) public view condition returns(Posted memory)
+    {
+            Posted storage sto = mapped2[addr];
+        return(sto);
+    }
+     function getComment(address postaddr,address commentaddr) public view condition returns(Commented memory)
+    {
+            Commented storage com = mapped3[postaddr][commentaddr];
+        return(com);
+    }
 
-   
 }
